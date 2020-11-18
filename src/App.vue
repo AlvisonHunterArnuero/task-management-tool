@@ -1,19 +1,58 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <div id="header"></div>
+    <div id="main-container">
+      <h1 class="">Todos</h1>
+      <Todos v-bind:todoslist="copyTodos" />
+      <Search />
+      <TodoAdd />
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Search from "./components/Search.vue";
+import Todos from "./components/Todos.vue";
+import TodoAdd from "./components/TodoAdd.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Search,
+    Todos,
+    TodoAdd,
+  },
+  data() {
+    return {
+      todos: [
+        {
+          id: 0,
+          title: "Comprar la Cena",
+          completed: false,
+        },
+        {
+          id: 1,
+          title: "Barrer el Cuarto",
+          completed: true,
+        },
+        {
+          id: 2,
+          title: "Arreglar la cama",
+          completed: false,
+        },
+        {
+          id: 3,
+          title: "Estudiar Python",
+          completed: true,
+        },
+      ],
+      copyTodos: [],
+    };
+  },
+  created() {
+    this.copyTodos = [...this.todos];
+  },
+};
 </script>
 
 <style>
