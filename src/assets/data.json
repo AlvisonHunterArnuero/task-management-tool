@@ -1,0 +1,29 @@
+{
+  "todos": [
+    {
+      "id": 0,
+      "title": "Update my Personal Website using Chakra UI",
+      "completed": false
+    },
+    {
+      "id": 1,
+      "title": "Complete the Lord of the Ring Books",
+      "completed": true
+    },
+    {
+      "id": 2,
+      "title": "Learn About Django Framework",
+      "completed": true
+    },
+    {
+      "id": 3,
+      "title": "Get certification for AWS Cloud Practitioner",
+      "completed": false
+    },
+    {
+      "id": 4,
+      "title": "Upload more JavaScript content to my Channel",
+      "completed": false
+    }
+  ]
+}
